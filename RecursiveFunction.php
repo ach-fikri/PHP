@@ -9,7 +9,9 @@ function factorialfunction(int $value): int{
 
 var_dump(factorialfunction(5));
 /*
- * dii php untuk menyelesaikan factorial kita dapat menggunakan recursive function
+ * di php untuk menyelesaikan factorial kita dapat menggunakan recursive function
+ * dalam menggunakan function recursiv jangan terlalu dalam karena jika terlalu dalam maka PHP akan menhentikan program karena penggunaan memori pada recursive function sangat besar sehingga jika ingin melakukkan looping dengan banyak data sebaiknya menggunakan loop biasa
+ * 
  */
 
 function factorialrecursive(int $value):int{
@@ -20,3 +22,15 @@ function factorialrecursive(int $value):int{
     }
 }
 var_dump(factorialfunction(5));
+
+function loop(int $value){
+    if ($value == 0){
+        echo "end loop".PHP_EOL;
+    }
+    else{
+        echo "loop - $value".PHP_EOL;
+        loop($value -1);
+    }
+}
+
+loop(3000000);
